@@ -16,9 +16,10 @@
     The bar at the top with all the page links.
     Each link jumps to a section using its id.
   ============================================= -->
-  <nav>
+  <nav id="navbar">
     <div class="logo">🐉 The Dragon's Keep</div>
-    <ul>
+    <button id="menuBtn">=</button>
+    <ul id="navLinks">
       <li><a href="#about">What is D&D?</a></li>
       <li><a href="#classes">Classes</a></li>
       <li><a href="#battle">Battle</a></li>
@@ -31,6 +32,7 @@
     The big opening screen visitors see first.
   ============================================= -->
   <section id="hero">
+    <div id="embers"></div>
     <h1>The Dragon's Keep</h1>
     <p>Your beginner's guide to Dungeons &amp; Dragons</p>
     <a href="#about" class="btn">Start Your Adventure</a>
@@ -143,9 +145,9 @@
       <div class="fighter" id="player-box">
         <div class="fighter-emoji">🧑‍⚔️</div>
         <div class="fighter-name">You (Fighter)</div>
-        <div class="hp-label">HP: <span id="player-hp">20</span> / 20</div>
+        <div class="hp-label">HP: <span id="playerHP">20</span> / 20</div>
         <div class="hp-bar">
-          <div class="hp-fill green" id="player-bar"></div>
+          <div class="hp-fill green" id="playerBar"></div>
         </div>
       </div>
 
@@ -156,12 +158,16 @@
       <div class="fighter" id="enemy-box">
         <div class="fighter-emoji">👺</div>
         <div class="fighter-name">Goblin</div>
-        <div class="hp-label">HP: <span id="enemy-hp">7</span> / 7</div>
+        <div class="hp-label">HP: <span id="enemyHP">7</span> / 7</div>
         <div class="hp-bar">
-          <div class="hp-fill red" id="enemy-bar"></div>
+          <div class="hp-fill red" id="enemyBar"></div>
         </div>
       </div>
 
+    </div>
+
+    <div class="round-display">
+      Round: <span id="roundNum">1</span>
     </div>
 
     <!-- Action Buttons: clicking these triggers JS functions -->
@@ -172,13 +178,15 @@
     </div>
 
     <!-- The dice result shows up here after rolling -->
-    <div id="dice-result" class="dice-result">🎲 Roll to begin!</div>
+    <div id="diceBox" class="dice-result">🎲  Roll to begin!
+    <span id="diceNum">-</span>
+    </div>
 
     <!-- Combat messages appear here one by one -->
-    <div id="log" class="log"></div>
+    <div id="combatLog" class="log"></div>
 
     <!-- Restart button — hidden until the fight ends -->
-    <button id="restart-btn" onclick="restartBattle()" style="display:none">🔄 Play Again</button>
+    <button id="restartBtn" onclick="restartBattle()" style="display:none">🔄 Play Again</button>
 
   </section>
 
