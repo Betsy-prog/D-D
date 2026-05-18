@@ -459,7 +459,7 @@ function restartBattle() {
 
 
 // ================================================
-// PAGE LOAD — runs everything when the page is ready
+// PAGE LOAD
 // ================================================
 // DOMContentLoaded fires when all the HTML has been
 // built by the browser. It's the safe point to run JS
