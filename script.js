@@ -137,24 +137,24 @@ function toggleAccordion(button) {
 //
 // GAME STATE — all the numbers live here.
 // Whenever something changes (HP drops, round ticks),
-// we update this object then refresh the UI.
+// it updates this object then refreshes the UI.
 // ================================================
 
 // This object holds all battle data
 const game = {
-  playerHP:    20,    // current player health
-  playerMax:   20,    // maximum player health
+  playerHP:    20,    
+  playerMax:   20,   
   playerAC:    16,    // player armor class
-  enemyHP:     7,     // current goblin health
-  enemyMax:    7,     // maximum goblin health
+  enemyHP:     7,     
+  enemyMax:    7,     
   enemyAC:     15,    // goblin armor class
-  round:       1,     // current round number
+  round:       1,     
   isDodging:   false, // is the player dodging this round?
   gameOver:    false, // has the fight ended?
 };
 
 // ---- DICE ROLLING ----
-// This is the core of D&D math!
+// The core of D&D math
 // rollDie(20) gives a random number from 1 to 20
 function rollDie(sides) {
   return Math.floor(Math.random() * sides) + 1;
