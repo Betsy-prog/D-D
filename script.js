@@ -1,9 +1,3 @@
-// ================================================
-// script.js — The Dragon's Keep
-// ================================================
-// JavaScript makes the page INTERACTIVE.
-// HTML = structure. CSS = style. JS = behavior.
-//
 // This file does 4 things:
 // 1. Navigation hamburger menu
 // 2. Ember particle effect on the hero
@@ -19,12 +13,9 @@
 // Clicking the ☰ button shows/hides them.
 // ================================================
 
-// "getElementById" finds an HTML element by its id="..."
 const menuBtn  = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
-// "addEventListener" listens for a user action.
-// 'click' = when the button is clicked, run this function.
 menuBtn.addEventListener('click', function() {
   // "classList.toggle" adds the class if missing, removes if present
   navLinks.classList.toggle('open');
